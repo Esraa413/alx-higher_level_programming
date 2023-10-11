@@ -3,6 +3,6 @@ def multiply_by_2(a_dictionary):
     new = a_dictionary.copy()
     num_keys = list(new.keys())
 
-    for x in nuw_keys:
+    for x in num_keys:
         new[x] *= 2
     return (new)
