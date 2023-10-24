@@ -1,13 +1,13 @@
 #!/usr/bin/python3
-""" class Square ."""
+""" class Square."""
 
 
 
 class Square:
-    """ class defines a square """
+    """class defines a square."""
 
     def __init__(self, size=0):
-        """ Instantiation with size.
+        """Instantiation with size.
         Args:
             size: (int) size of new square.
         """
@@ -15,7 +15,7 @@ class Square:
 
         @property
         def size(self):
-            """ must be an integer size."""
+            """must be an integer size."""
             return (self.__size)
 
         @size.setter
@@ -27,5 +27,5 @@ class Square:
             self.__size = value
 
             def area(self):
-                """returns the current square area"""
+                """returns the current square area."""
                 return (self.__size * self.__size)
