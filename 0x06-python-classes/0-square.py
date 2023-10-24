@@ -3,5 +3,5 @@
 
 
 class Square:
-
+    """ class was purposefully """
     pass
