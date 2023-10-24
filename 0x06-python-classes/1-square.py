@@ -4,11 +4,11 @@
 
 
 class Square:
-    """class defines a square."""
+    """defines a square."""
 
 
     def __init__(self, size):
-        """Instantiation with size.
+        """Insth size.
 
         Args:
             size (int): size of new square.
