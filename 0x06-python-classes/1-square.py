@@ -10,6 +10,6 @@ class Square:
         """Instantiation with size.
 
         Args:
-            size: int size of new square.
+            size: (int) size of new square.
         """
         self.__size = size
