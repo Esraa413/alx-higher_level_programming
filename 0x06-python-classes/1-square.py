@@ -8,9 +8,11 @@ class Square:
 
 
     def __init__(self, size):
+        """ Instantiation with size.
 
-        """ arge:
-        size : Private instance attribute.
+        Arge:
+        size: (int) size of new  square.
+
         """
 
 
