@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-""" class Square."""
+""" class Square ."""
 
 
 
 class Square:
-    """class defines a square."""
+    """ class defines a square """
 
-    def __init__(self, size=0):
+    def __init__(self, size):
         """Instantiation with size.
         Args:
             size: (int) size of new square.
@@ -29,3 +29,11 @@ class Square:
     def area(self):
         """returns the current square area."""
         return (self.__size * self.__size)
+
+    def my_print(self):
+        """Print the square"""
+        for x in range(0, self.__size):
+            [print("#", end="") for y in range(self.__size)]
+            print("")
+        if self.__size == 0:
+            print("")
