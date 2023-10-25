@@ -6,7 +6,7 @@ def list_division(my_list_1, my_list_2, list_length):
     Args:
         my_list_1 (list): first list.
         my_list_2 (list): second list.
-        list_length (int): length number to divide
+        list_length (int): length number to divide.
     
     Return:
         new list of length containing all the divisions.
