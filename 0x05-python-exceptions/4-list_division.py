@@ -9,10 +9,10 @@ def list_division(my_list_1, my_list_2, list_length):
         list_length (int): length number to divide
     
     Return:
-        new list of length, containing all the divisions.
+        new list of length containing all the divisions.
     """
 
-    new_list = []
+    new = []
     for x in range(0, list_length):
         try:
             div = my_list_1[x] / my_list_2[x]
@@ -26,6 +26,6 @@ def list_division(my_list_1, my_list_2, list_length):
             print("out of range")
             div = 0
         finally:
-            new_list.append(div)
+            new.append(div)
 
-    return (new_list)
+    return (new)
