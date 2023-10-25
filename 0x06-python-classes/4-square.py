@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-""" class Square."""
 
+"""class Square."""
 
 
 class Square:
-    """class defines a square."""
+    """class defines a square"""
 
-    def __init__(self, size=0):
-        """Instantiation with size.
+    def __init__(self, size=0)
+        """Initialize with size.
         Args:
-            size: (int) size of new square.
+            size (int):  size of new square.
         """
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
