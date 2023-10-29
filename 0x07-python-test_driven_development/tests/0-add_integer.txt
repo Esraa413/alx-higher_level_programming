@@ -1,1 +1,12 @@
-ghggj
+===========================
+function to `0-add_integer`
+============================
+How  Use `0-add_integer.py`
+============================
+function that adds 2 integers.
+===
+
+function from module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+
