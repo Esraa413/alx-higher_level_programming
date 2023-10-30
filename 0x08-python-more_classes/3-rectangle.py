@@ -10,6 +10,7 @@ class Rectangle:
         width (int): the width
         height (int): the height
     """
+
     def __init__(self, width=0, height=0):
         """optional width and height"""
         self.width = width
@@ -50,12 +51,12 @@ class Rectangle:
     def perimeter(self):
         """Public instance method"""
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return (2 * self.__width) + (2 * self.height)
+            return (0)
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-       """printable representation of the Rectangle"""
-       if self.__width == 0 or self.__height == 0:
+        """printable representation of the Rectangle"""
+        if self.__width == 0 or self.__height == 0:
             return ("")
 
         rect = []
