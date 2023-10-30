@@ -10,9 +10,11 @@ class Rectangle:
         width (int): the width
         height (int): the height
     """
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """optional width and height"""
+        type(self).number_of_instances += 1
         self.width = width
         self.height = height
 
@@ -29,7 +31,7 @@ class Rectangle:
         if value < 0:
             raise ValueError("width must be >= 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """instance attribute: height"""
@@ -53,6 +55,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
+
     def __str__(self):
         """printable representation of the Rectangle"""
         if self.__width == 0 or self.__height == 0:
@@ -70,3 +73,8 @@ class Rectangle:
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return (rect)
+
+    def __del__(self):
+        """instance of Rectangle is deleted"""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
