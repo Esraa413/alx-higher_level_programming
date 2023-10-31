@@ -1,0 +1,115 @@
+===========================
+function `5-text_indentation`
+============================
+How to use `text_indentation`
+============================
+Import module:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+no delim:
+	>> text_indentation("Hello Holberton")
+    		Hello Holberton
+string with spaces:
+    	>> text_indentation("Holberton          ")
+    		Holberton
+string with spaces 2:
+    	>> text_indentation("        Holberton")
+    		Holberton
+string with spaces 3:
+   	>> text_indentation("        Holberton          ")
+    		Holberton
+string with empty string:
+	>> text_indentation("")
+string with empty string 2:
+   	>> text_indentation("      ")
+simple:
+    	>> text_indentation("Hello: Holberton")
+   		 Hello:
+    		<BLANKLINE>
+    		Holberton
+delims with spaces:
+    	>> text_indentation("      ?:  :  ")
+    		?
+    		<BLANKLINE>
+    		:
+    		<BLANKLINE>
+    		:
+    		<BLANKLINE>
+newline:
+    	>> text_indentation("\n")
+    		<BLANKLINE>
+newline 2:
+    	>> text_indentation("\n\n")
+    		<BLANKLINE>
+    		<BLANKLINE>
+newline 3:
+	>> text_indentation("Hello\n\n")
+    		Hello
+    		<BLANKLINE>
+all delimeters:
+	>> text_indentation("Hello: Holberton? school. fooo")
+    		Hello:
+    		<BLANKLINE>
+    		Holberton?
+    		<BLANKLINE>
+    		school.
+    		<BLANKLINE>
+    		fooo
+all delimeters with spaces:
+    	>> text_indentation("Hello   :     Holberton    ?    school.    fooo")
+    		Hello:
+    		<BLANKLINE>
+    		Holberton?
+    		<BLANKLINE>
+    		school.
+    		<BLANKLINE>
+    		fooo
+all delimeters with spaces at end:
+    	>> text_indentation("Hello   :     Holberton    ?    school.    fooo     ")
+    		Hello:
+    		<BLANKLINE>
+    		Holberton?
+    		<BLANKLINE>
+    		school.
+    		<BLANKLINE>
+    		fooo
+just delimeters:
+    	>> text_indentation(".?:")
+    		.
+    		<BLANKLINE>
+    		?
+    		<BLANKLINE>
+    		:
+    		<BLANKLINE>
+just delimeters 2:
+    	>> text_indentation("     ?   ")
+    	?
+    	<BLANKLINE>
+nonindent inside indent
+	>> text_indentation("?Hello.")
+    		?
+    		<BLANKLINE>
+    		Hello.
+    		<BLANKLINE>
+existing newlines:
+    	>> text_indentation("?\n\n.\n\n:")
+    		?
+    		<BLANKLINE>
+    		<BLANKLINE>
+    		<BLANKLINE>
+    		.
+    		<BLANKLINE>
+    		<BLANKLINE>
+    		<BLANKLINE>
+    		:
+    		<BLANKLINE>
+none:
+    	>> text_indentation(None)
+    	Trace_back (recent call last):
+    ...
+    	Type_Error: text must be a string
+number:
+   	>> text_indentation(33)
+    	Trace_back (recent call last):
+    ...
+    	Type_Error: text must be a string
