@@ -5,8 +5,78 @@ How  Use `0-add_integer.py`
 ============================
 function that adds 2 integers.
 ===
+-function from module:
+	>> add_integer = __import__('0-add_integer').add_integer
+int argument:
+	>> add_integer(2)
+	100
+int argument and check default second:
+	>> add_integer(0)
+	98
+float:
+	>> add_integer(123.9)
+	221
+negative float:
+	>> add_integer(-95.5)
+	3
+integers:
+	>> add_integer(10, 5)
+	15
+big integers:
+	>> add_integer(999999998, 999999999)
+	1999999997
+negative integers:
+	>> add_integer(34263478, -89234582395)
+	-89200318917
+negative and positive integers:
+	>> add_integer(-13947692, 57234)
+	-13890458
+integer and a float:
+	>> add_integer(123, 7.987)
+	130
+float and integer:
+	>> add_integer(234234.43545, 4352345)
+	4586579floats:
+float:
+	>> add_integer(0.9, 0.9)
+	0
+To add infinity:
+	>> add_integer(float('inf'), float('-inf'))
+	Trace_back (recent call last):
+	...
+	Over_flow_Error: convert float infinity to integer.
 
-function from module:
-	>>> add_integer = __import__('0-add_integer').add_integer
+To add nan:
+	>> add_integer(0, float('nan'))
+	Trace_back (recent call last):
+	...
+    Value_Error: convert float NaN to integer
 
+the first arg invalid:
+	>> add_integer("foo", 0)
+	Trace_back (recent call last):
+	...
+	Type_Error: must be integer
 
+the second arg invalid:
+	>> add_integer(123123, [])
+	Trace_back (most recent call last):
+	...
+	Type_Error: must be integer
+
+both args invalid:
+	>> add_integer(None, None)
+	Trace_back (most recent call last):
+	...
+	Type_Error: must be  integer
+
+strings:
+	>> add_integer("foo", "bar")
+	Trace_back (recent call last):
+	...
+	Type_Error: must be integer
+float overflow:
+	>> add_integer(float('inf'), 0)
+	Trace_back (recent call last):
+	...
+	Over_flow_Error: convert float infinity to integer
