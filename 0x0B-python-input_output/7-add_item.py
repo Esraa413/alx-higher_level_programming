@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""function that creates an Object from a JSON file."""
+"""script that adds all arguments to a Python list."""
 import sys
 
 if __name__ == "__main__":
