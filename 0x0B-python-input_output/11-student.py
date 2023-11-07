@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""function class Student."""
+"""class Student that defines a student"""
 
 
 class Student:
-    """student epresent."""
+    """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
         """Initialize the new Student.
 
         Args:
-            first_name (str): student first name 
+            first_name (str): student first name
             last_name (str): student last name
             age (int): The age student.
         """
@@ -29,5 +29,11 @@ class Student:
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
 
-    
+    def reload_from_json(self, json):
+        """Replace all attributes.
 
+        Args:
+            json (dict): The key_value pairs replace attributes.
+        """
+        for k, v in json.items():
+            setattr(self, k, v)
