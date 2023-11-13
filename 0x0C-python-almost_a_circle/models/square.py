@@ -31,3 +31,44 @@ class Square(Rectangle):
         """Return print() and str() representation of Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
+
+    def update(self, *args, **kwargs):
+        """Update Square.
+
+        Args:
+            *args (ints): New values attribute.
+                - 1 argument represents id.
+                - 2 argument represents size.
+                - 3 argument represents x.
+                - 4 argument represents y.
+            **kwargs (dict): New key/value pairs.
+        """
+        if args and len(args) != 0:
+            ar = 0
+            for arg in args:
+                if ar == 0:
+                    if arg is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = arg
+                if ar == 1:
+                    self.size = arg
+                if ar == 2:
+                    self.x = arg
+                if ar == 3:
+                    self.y = arg
+                ar += 1
+
+        if kwargs and len(kwargs) != 0:
+            for w, h in kwargs.items():
+                if w == "id":
+                    if h is None:
+                        self.__init__(self.size, self.x, self.y)
+                    else:
+                        self.id = h
+                if w == "size":
+                    self.size = h
+                if w == "x":
+                    self.x = h
+                if w == "y":
+                    self.y = h
