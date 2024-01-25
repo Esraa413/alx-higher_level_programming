@@ -1,1 +1,3 @@
 O(log(n))
+o(n)
+o(nleg(n))
